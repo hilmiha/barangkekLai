@@ -1,5 +1,5 @@
 import LaiThemeToggle from "./Lai_ThemeTogge";
-import { ReactComponent as Menuhamburger_Icon } from "../../assets/icons/menuhamburger_icon.svg";
+import { ReactComponent as MenuhamburgerIcon } from "../../assets/icons/menuhamburger_icon.svg";
 import logo from "../../assets/logo_sm.png";
 
 const LaiNavbar = (props) => {
@@ -12,14 +12,14 @@ const LaiNavbar = (props) => {
                     className="drawer-toggle"
                 />
                 <div className="drawer-content flex flex-col">
-                    <div className="w-full navbar bg-base-100 p-5 sticky top-0">
+                    <div className="w-full navbar bg-base-100 p-5 sticky top-0 z-10">
                         <div className="max-w-6xl w-full mx-auto">
                             <div className="flex-none lg:hidden mr-5">
                                 <label
                                     htmlFor="drawer-navbar"
                                     className="btn btn-square btn-ghost"
                                 >
-                                    <Menuhamburger_Icon className="fill-laiDarkAccent w-5" />
+                                    <MenuhamburgerIcon className="fill-laiDarkAccent w-5" />
                                 </label>
                             </div>
 
@@ -62,7 +62,7 @@ const LaiNavbar = (props) => {
                                         </button>
                                     </div>
 
-                                    <div class="divider divider-horizontal"></div>
+                                    <div className="divider divider-horizontal"></div>
                                     <div>
                                         <LaiThemeToggle />
                                     </div>

@@ -1,13 +1,15 @@
 import "./App.css";
 import { AppThemeProvider } from "./context/AppThemeContext";
-
-import BerandaPage from "./components/pages/Beranda";
+import { LaiCekJadwalProvider } from "./context/LaiCekJadwalContext";
+import BerandaPage from "./components/pages/beranda/Index";
 
 function App() {
     return (
         <div className="App">
             <AppThemeProvider>
-                <BerandaPage />
+                <LaiCekJadwalProvider>
+                    <BerandaPage />
+                </LaiCekJadwalProvider>
             </AppThemeProvider>
         </div>
     );
