@@ -1,6 +1,6 @@
 const LaiSectionKenapa = () => {
     return (
-        <div className="max-w-6xl w-full mx-auto mt-32 mb-32 lg:mb-64 px-8 lg:px-4">
+        <div className="max-w-6xl w-full mx-auto mt-32 mb-32 lg:mb-64 px-6 lg:px-4">
             <div>
                 <p className="text-3xl lg:text-5xl font-bold text-center">
                     Kenapa Memilih{" "}

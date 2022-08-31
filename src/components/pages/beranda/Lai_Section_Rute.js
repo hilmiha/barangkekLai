@@ -4,7 +4,7 @@ import { AppThemeContext } from "../../../context/AppThemeContext";
 const LaiSectionRute = () => {
     const theme = useContext(AppThemeContext).theme;
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-64 mb-32 lg:mb-64 px-8 lg:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-64 mb-32 lg:mb-64 px-6 lg:px-4">
             <div className="flex flex-col justify-center items-center mb-8 lg:mb-0 ">
                 <img
                     src={

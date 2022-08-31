@@ -1,6 +1,6 @@
 const LaiSectionFasilitas = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-32 mb-32 lg:mb-64 px-8 lg:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-32 mb-32 lg:mb-64 px-6 lg:px-4">
             <div className="flex flex-col justify-center mr-0 lg:mr-20">
                 <div>
                     <p className="text-3xl lg:text-5xl font-bold text-center lg:text-left">

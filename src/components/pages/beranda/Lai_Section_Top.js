@@ -5,7 +5,7 @@ const LaiSectionTop = () => {
     const theme = useContext(AppThemeContext).theme;
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-10 lg:mt-24 mb-20 md:mb-32 lg:mb-40 px-8 lg:px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-6xl w-full mx-auto mt-10 lg:mt-24 mb-20 md:mb-32 lg:mb-40 px-6 lg:px-4">
             <div className="flex flex-col justify-center mr-0 md:mr-20 lg:mr-32">
                 <div>
                     <p className="text-3xl lg:text-5xl font-bold text-center md:text-left">
