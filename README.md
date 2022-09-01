@@ -34,6 +34,8 @@ Buka http://localhost:3000 untuk melihatnya di browser.
 ## Referensi 📑
 
 - [React JS](https://reactjs.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [React DayPicker](https://react-day-picker.js.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [daisyUI](https://daisyui.com/)
 - [Mockup & Assets - Designed by my self](https://www.figma.com/file/qq8KrLYLT0WTfeH7XpMEsN/BarangkekLai?node-id=0%3A1)
