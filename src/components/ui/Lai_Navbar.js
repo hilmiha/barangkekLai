@@ -2,6 +2,8 @@ import LaiThemeToggle from "./Lai_ThemeTogge";
 import { ReactComponent as MenuhamburgerIcon } from "../../assets/icons/menuhamburger_icon.svg";
 import logo from "../../assets/logo_sm.png";
 
+import { useEffect } from "react";
+
 const LaiNavbar = (props) => {
     return (
         <>
@@ -11,7 +13,7 @@ const LaiNavbar = (props) => {
                     type="checkbox"
                     className="drawer-toggle"
                 />
-                <div className="drawer-content flex flex-col">
+                <div className="drawer-content flex flex-col" id="page">
                     <div className="w-full navbar bg-base-100 p-5 sticky top-0 z-10">
                         <div className="max-w-6xl w-full mx-auto px-0 lg:px-4">
                             <div className="flex-none lg:hidden mr-5">

@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LaiCekJadwalContext } from "../../context/LaiCekJadwalContext";
 import LaiCalendar from "./Lai_Calendar";
 
@@ -19,6 +20,7 @@ const LaiCekJadwal = () => {
         tanggal_Temp,
         jumPenumpang_Temp,
         setJumPenumpang_Temp,
+        isInputInvalid,
     } = useContext(LaiCekJadwalContext);
 
     const handleKeberangkatan = (e) => {
@@ -37,11 +39,23 @@ const LaiCekJadwal = () => {
         setJumPenumpang_Temp(value);
     };
 
+    const [inputErrors, setInputErrors] = useState([]);
+
+    const navigate = useNavigate();
+
     const handleCekJadwal = () => {
-        setKotaAsal(kotaAsal_Temp);
-        setKotaTujuan(kotaTujuan_Temp);
-        setTanggal(tanggal_Temp);
-        setJumPenumpang(jumPenumpang_Temp);
+        const validated = isInputInvalid();
+        if (validated.length === 0) {
+            setInputErrors([]);
+
+            setKotaAsal(kotaAsal_Temp);
+            setKotaTujuan(kotaTujuan_Temp);
+            setTanggal(tanggal_Temp);
+            setJumPenumpang(jumPenumpang_Temp);
+            navigate("/cekjadwal", { replace: true });
+        } else {
+            setInputErrors(validated);
+        }
     };
 
     return (
@@ -49,7 +63,11 @@ const LaiCekJadwal = () => {
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Kota Keberangkatan</span>
                 <select
-                    className="select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    className={
+                        inputErrors.includes("kotaAsal")
+                            ? "select select-error border-2 bg-white text-gray-500 font-normal"
+                            : "select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    }
                     onChange={handleKeberangkatan}
                     value={kotaAsal_Temp}
                 >
@@ -69,11 +87,20 @@ const LaiCekJadwal = () => {
                         Padang
                     </option>
                 </select>
+                {inputErrors.includes("kotaAsal") && (
+                    <span className="text-error mt-2 mb-2 lg:mb-0">
+                        Pilih kota keberangkatan
+                    </span>
+                )}
             </div>
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Kota Tujuan</span>
                 <select
-                    className="select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    className={
+                        inputErrors.includes("kotaTujuan")
+                            ? "select select-error border-2 bg-white text-gray-500 font-normal"
+                            : "select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    }
                     value={kotaTujuan_Temp}
                     onChange={handleTujuan}
                 >
@@ -107,20 +134,45 @@ const LaiCekJadwal = () => {
                         </>
                     ) : null}
                 </select>
+
+                {inputErrors.includes("kotaTujuan") && (
+                    <span className="text-error mt-2 mb-2 lg:mb-0">
+                        Pilih kota tujuan
+                    </span>
+                )}
             </div>
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Tanggal Keberangkatan</span>
-                <div className="flex">
+                <div
+                    // className="flex border rounded-lg border-gray-300 "
+                    className={
+                        inputErrors.includes("tanggal")
+                            ? "flex border-2 border-error rounded-lg"
+                            : "flex border rounded-lg border-gray-300 "
+                    }
+                >
                     <input
                         type="text"
-                        className="input input-bordered input-primary border-gray-300 border-r-0 w-full bg-white text-gray-500 font-normal rounded-r-none"
+                        className={
+                            "input " +
+                            (inputErrors.includes("tanggal")
+                                ? "input-error"
+                                : "input-primary") +
+                            " border-0 w-full bg-white text-gray-500 font-normal rounded-r-none"
+                        }
                         value={dateInterpreter_sm(tanggal_Temp)}
                         readOnly
                     />
                     <div className="dropdown dropdown-end bg-white text-gray-500 h-12 rounded-r-lg">
                         <label
                             tabIndex="0"
-                            className="btn w-full h-12 rounded-l-none rounded-r-lg bg-white focus:bg-white focus:border-gray-300 hover:bg-gray-100 hover:border-gray-300 border-gray-300 focus:outline-2 focus:outline-primary capitalize text-left"
+                            className={
+                                "btn w-full h-12 rounded-l-none rounded-r-lg bg-white focus:bg-white focus:border-gray-300 hover:bg-gray-100 border-gray-300 border-r-0 border-y-0 hover:border-gray-300 focus:outline-2 " +
+                                (inputErrors.includes("tanggal")
+                                    ? "focus:outline-error"
+                                    : "focus:outline-primary") +
+                                " capitalize text-left"
+                            }
                         >
                             <CalendarIcon className="w-5 fill-black" />
                         </label>
@@ -132,11 +184,21 @@ const LaiCekJadwal = () => {
                         </div>
                     </div>
                 </div>
+                {inputErrors.includes("tanggal") && (
+                    <span className="text-error mt-2 mb-2 lg:mb-0">
+                        Pilih tanggal
+                    </span>
+                )}
             </div>
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Jumlah Penumpang</span>
                 <select
-                    className="select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    // className="select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    className={
+                        inputErrors.includes("jumPenumpang")
+                            ? "select select-error border-2 bg-white text-gray-500 font-normal"
+                            : "select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
+                    }
                     value={jumPenumpang_Temp}
                     onChange={handleJumPenumpang}
                 >
@@ -150,10 +212,18 @@ const LaiCekJadwal = () => {
                         3
                     </option>
                 </select>
+                {inputErrors.includes("jumPenumpang") && (
+                    <span className="text-error mt-2 mb-2 lg:mb-0">
+                        Pilih Jumlah Penumpang
+                    </span>
+                )}
             </div>
             <div className="flex items-end mt-8 lg:mt-0">
                 <button
-                    className="btn btn-primary rounded-full w-full font-bold capitalize"
+                    className={
+                        "btn btn-primary rounded-full w-full font-bold capitalize" +
+                        (inputErrors.length > 0 ? " lg:mb-8" : null)
+                    }
                     onClick={handleCekJadwal}
                 >
                     Cek Jadwal

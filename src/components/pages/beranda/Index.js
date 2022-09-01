@@ -8,14 +8,17 @@ import LaiSectionOthLayanan from "./Lai_Section_OthLayanan";
 
 const BerandaPage = () => {
     return (
-        <LaiMainLayout>
+        // <LaiMainLayout>
+        <>
             <LaiSectionTop />
             <LaiCekJadwal />
             <LaiSectionRute />
             <LaiSectionFasilitas />
             <LaiSectionKenapa />
             <LaiSectionOthLayanan />
-        </LaiMainLayout>
+        </>
+
+        // </LaiMainLayout>
     );
 };
 
