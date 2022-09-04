@@ -1,12 +1,17 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import LaiCekJadwal from "../../ui/Lai_CekJadwal";
-import { LaiCekJadwalContext } from "../../../context/LaiCekJadwalContext";
 import { dateInterpreter } from "../../../untils/dateInterpreter";
 import { ReactComponent as EditIcon } from "../../../assets/icons/edit.svg";
 
 const LaiSectionInputBar = () => {
-    const { kotaAsal, kotaTujuan, tanggal, jumPenumpang } =
-        useContext(LaiCekJadwalContext);
+    const location = useLocation();
+
+    const kotaAsal = location.state.kotaAsal;
+    const kotaTujuan = location.state.kotaTujuan;
+    const jumPenumpang = location.state.jumPenumpang;
+    const tanggal = location.state.tanggal;
 
     const [open, setOpen] = useState(false);
 
@@ -26,9 +31,11 @@ const LaiSectionInputBar = () => {
                         <p className="text-xl mb-4 capitalize">
                             {kotaAsal} - {kotaTujuan}
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 md:w-4/5 lg:w-7/12">
+                        <div>
                             <span>{dateInterpreter(tanggal)}</span>
-                            <span>{jumPenumpang} Orang</span>
+                            <span className="lg:ml-8 block lg:inline">
+                                {jumPenumpang} Orang
+                            </span>
                         </div>
                     </div>
                     <div className="flex justify-end">

@@ -5,11 +5,6 @@ export const LaiCekJadwalContext = createContext();
 export const LaiCekJadwalProvider = (props) => {
     const sekarang = new Date();
 
-    const [kotaAsal, setKotaAsal] = useState("");
-    const [kotaTujuan, setKotaTujuan] = useState("");
-    const [tanggal, setTanggal] = useState(sekarang);
-    const [jumPenumpang, setJumPenumpang] = useState(1);
-
     const [kotaAsal_Temp, setKotaAsal_Temp] = useState("");
     const [kotaTujuan_Temp, setKotaTujuan_Temp] = useState("");
     const [tanggal_Temp, setTanggal_Temp] = useState(sekarang);
@@ -18,7 +13,7 @@ export const LaiCekJadwalProvider = (props) => {
     const isInputInvalid = () => {
         let invalidInput = [];
 
-        if (kotaAsal_Temp.trim() === "" || kotaAsal === undefined) {
+        if (kotaAsal_Temp.trim() === "" || kotaAsal_Temp === undefined) {
             invalidInput.push("kotaAsal");
         }
 
@@ -26,44 +21,21 @@ export const LaiCekJadwalProvider = (props) => {
             invalidInput.push("kotaTujuan");
         }
 
-        if (!(tanggal instanceof Date)) {
+        if (!(tanggal_Temp instanceof Date)) {
             invalidInput.push("tanggal");
         }
 
-        if (!(0 < jumPenumpang < 4)) {
+        if (!(0 < jumPenumpang_Temp < 4)) {
             invalidInput.push("jumPenumpang");
         }
 
         return invalidInput;
     };
 
-    const isDefined = () => {
-        if (
-            kotaAsal.trim() === "" ||
-            kotaAsal === undefined ||
-            kotaTujuan.trim() === "" ||
-            kotaTujuan === undefined ||
-            !(tanggal instanceof Date) ||
-            !(0 < jumPenumpang < 4)
-        ) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
     return (
         <>
             <LaiCekJadwalContext.Provider
                 value={{
-                    kotaAsal,
-                    setKotaAsal,
-                    kotaTujuan,
-                    setKotaTujuan,
-                    tanggal,
-                    setTanggal,
-                    jumPenumpang,
-                    setJumPenumpang,
                     kotaAsal_Temp,
                     setKotaAsal_Temp,
                     kotaTujuan_Temp,
@@ -72,7 +44,6 @@ export const LaiCekJadwalProvider = (props) => {
                     setTanggal_Temp,
                     jumPenumpang_Temp,
                     setJumPenumpang_Temp,
-                    isDefined,
                     isInputInvalid,
                 }}
             >

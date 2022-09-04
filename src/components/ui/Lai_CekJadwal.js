@@ -9,10 +9,6 @@ import { ReactComponent as CalendarIcon } from "../../assets/icons/calendar.svg"
 
 const LaiCekJadwal = () => {
     const {
-        setKotaAsal,
-        setKotaTujuan,
-        setTanggal,
-        setJumPenumpang,
         kotaAsal_Temp,
         setKotaAsal_Temp,
         kotaTujuan_Temp,
@@ -47,12 +43,14 @@ const LaiCekJadwal = () => {
         const validated = isInputInvalid();
         if (validated.length === 0) {
             setInputErrors([]);
-
-            setKotaAsal(kotaAsal_Temp);
-            setKotaTujuan(kotaTujuan_Temp);
-            setTanggal(tanggal_Temp);
-            setJumPenumpang(jumPenumpang_Temp);
-            navigate("/cekjadwal", { replace: true });
+            navigate("/cekjadwal", {
+                state: {
+                    kotaAsal: kotaAsal_Temp,
+                    kotaTujuan: kotaTujuan_Temp,
+                    tanggal: tanggal_Temp,
+                    jumPenumpang: jumPenumpang_Temp,
+                },
+            });
         } else {
             setInputErrors(validated);
         }
@@ -144,7 +142,6 @@ const LaiCekJadwal = () => {
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Tanggal Keberangkatan</span>
                 <div
-                    // className="flex border rounded-lg border-gray-300 "
                     className={
                         inputErrors.includes("tanggal")
                             ? "flex border-2 border-error rounded-lg"
@@ -193,7 +190,6 @@ const LaiCekJadwal = () => {
             <div className="form-control w-full">
                 <span className="font-bold mb-4">Jumlah Penumpang</span>
                 <select
-                    // className="select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
                     className={
                         inputErrors.includes("jumPenumpang")
                             ? "select select-error border-2 bg-white text-gray-500 font-normal"
@@ -221,7 +217,7 @@ const LaiCekJadwal = () => {
             <div className="flex items-end mt-8 lg:mt-0">
                 <button
                     className={
-                        "btn btn-primary rounded-full w-full font-bold capitalize" +
+                        "btn btn-primary rounded-full w-full font-bold capitalize " +
                         (inputErrors.length > 0 ? " lg:mb-8" : null)
                     }
                     onClick={handleCekJadwal}

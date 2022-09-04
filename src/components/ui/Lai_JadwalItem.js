@@ -1,10 +1,24 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import dotify from "../../untils/dotify";
 
 const Lai_JadwalItem = ({ props }) => {
+    const sisa =
+        props.tipe === 0 ? 7 - props.terisi.length : 5 - props.terisi.length;
+
+    const location = useLocation();
+    const jumPenumpang = location.state.jumPenumpang;
+
+    const navigate = useNavigate();
+    const handlePesan = () => {
+        navigate("/pesan", {
+            state: { idJadwal: props.id, jumTiket: jumPenumpang },
+        });
+    };
+
     return (
         <div
             className={
-                props.sisa > 0
+                sisa > 0
                     ? "bg-neutral p-8 rounded-xl mb-8 border border-laiBlue"
                     : "bg-neutral-focus p-8 rounded-xl mb-8 border border-laiBlue text-gray-400"
             }
@@ -13,15 +27,17 @@ const Lai_JadwalItem = ({ props }) => {
                 <div className="mb-4 lg:mb-0">
                     <p className="mb-4 capitalize">
                         <b>
-                            {props.tipe} | {props.keberangkatan} -{" "}
-                            {props.tujuan}
+                            {props.tipe === 0
+                                ? "Economy Class"
+                                : "Executive Star"}{" "}
+                            | {props.keberangkatan} - {props.tujuan}
                         </b>
                     </p>
-                    <p>Sisa {props.sisa} Kursi</p>
+                    <p>Sisa {sisa} Kursi</p>
                 </div>
                 <div className="mb-8 md:mb-0">
                     <p className="md:text-end">
-                        Keberangkatan Pukul <b>{props.pukul} WIB</b>
+                        Keberangkatan Pukul <b>{props.waktu} WIB</b>
                     </p>
                 </div>
                 <div className="flex md:justify-end col-span-1 md:col-span-2 lg:col-span-1">
@@ -29,8 +45,11 @@ const Lai_JadwalItem = ({ props }) => {
                         <p className="mb-4">
                             <b>Rp {dotify(props.harga)}</b>
                         </p>
-                        {props.sisa > 0 ? (
-                            <button className="btn btn-primary w-full md:w-60 rounded-full capitalize">
+                        {sisa > 0 ? (
+                            <button
+                                className="btn btn-primary w-full md:w-60 rounded-full capitalize"
+                                onClick={handlePesan}
+                            >
                                 Pesan Tiket
                             </button>
                         ) : (
