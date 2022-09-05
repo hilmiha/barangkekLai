@@ -12,13 +12,13 @@ Figma Link : https://www.figma.com/file/qq8KrLYLT0WTfeH7XpMEsN/BarangkekLai?node
   - [x] Mocup halaman Beranda 
   - [x] Mocup halaman Cek Jadwal
   - [x] Mocup halaman Pilih Bangku
-  - [ ] Mocup halaman Form Penumpang
+  - [x] Mocup halaman Form Penumpang
   - [ ] Mocup halaman Cek Tiket
 - [ ] Transalate To React
   - [x] Halaman Beranda 
   - [x] Halaman Cek Jadwal
   - [x] Halaman Pilih Bangku
-  - [ ] Halaman Form Penumpang
+  - [x] Halaman Form Penumpang
   - [ ] Halaman Cek Tiket
 
 
