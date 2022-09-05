@@ -6,8 +6,8 @@ const LaiSectionFormBar = () => {
     const { itemJadwal, jumTiket } = useContext(LaiFormPesanContext);
 
     const tipe = itemJadwal.tipe;
-    const keberangkatan = itemJadwal.keberangkatan;
-    const tujuan = itemJadwal.tujuan;
+    const keberangkatan = itemJadwal.kotaAsal;
+    const tujuan = itemJadwal.kotaTujuan;
     const tanggal = itemJadwal.tanggal;
     const waktu = itemJadwal.waktu;
     return (

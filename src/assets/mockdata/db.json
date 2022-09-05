@@ -1,0 +1,271 @@
+{
+    "jadwal": [
+        {
+            "id": "631620065d121cc499175dc3",
+            "tipe": 0,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [3, 4, 5, 6, 7],
+            "sisa": 2
+        },
+        {
+            "id": "631620061019bb742a5d9bee",
+            "tipe": 0,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [1, 2, 3, 4, 5, 6, 7],
+            "sisa": 0
+        },
+        {
+            "id": "63162006b34e2c3ff8bc0def",
+            "tipe": 0,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [],
+            "sisa": 7
+        },
+        {
+            "id": "631620063d9b04bc0945e75e",
+            "tipe": 1,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1, 4],
+            "sisa": 3
+        },
+        {
+            "id": "631620060f0f478e48d2638a",
+            "tipe": 1,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [7],
+            "sisa": 4
+        },
+        {
+            "id": "63162006cf828d169c57a662",
+            "tipe": 1,
+            "kotaAsal": "padang",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [2, 4, 5],
+            "sisa": 2
+        },
+
+        {
+            "id": "6316210240270fe1c9546da0",
+            "tipe": 0,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [1, 2, 4, 6, 7],
+            "sisa": 2
+        },
+        {
+            "id": "63162102fdc035e05cd434ad",
+            "tipe": 0,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [6, 7],
+            "sisa": 5
+        },
+        {
+            "id": "6316210206dbc5c5569d3f39",
+            "tipe": 0,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [6, 7],
+            "sisa": 5
+        },
+        {
+            "id": "631621027597898358aef2f6",
+            "tipe": 1,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [],
+            "sisa": 5
+        },
+        {
+            "id": "6316210206043637f1d2b881",
+            "tipe": 1,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [2, 4, 5],
+            "sisa": 2
+        },
+        {
+            "id": "631621029e66f65fdf75be8a",
+            "tipe": 1,
+            "kotaAsal": "bukittinggi",
+            "kotaTujuan": "pekanbaru",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1, 4, 5],
+            "sisa": 2
+        },
+
+        {
+            "id": "6316212f584a33fafad057a6",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [2, 3, 4],
+            "sisa": 4
+        },
+        {
+            "id": "6316212fe7e3007891ad61dc",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [1],
+            "sisa": 6
+        },
+        {
+            "id": "6316212fce7305ff07749950",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [1, 2, 4, 6, 7],
+            "sisa": 2
+        },
+        {
+            "id": "6316212f0a69ae15919c722f",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1, 2, 4, 5],
+            "sisa": 1
+        },
+        {
+            "id": "6316212f6ed8a4fdffdfd14a",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1],
+            "sisa": 4
+        },
+        {
+            "id": "6316212fafea45f5c44ccf18",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "bukittinggi",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1, 4, 5],
+            "sisa": 2
+        },
+
+        {
+            "id": "6316214e436bf6645225eb6c",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [2, 3, 4],
+            "sisa": 4
+        },
+        {
+            "id": "6316214e4e94ecd9298edc00",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [1, 2, 3, 4, 5, 7],
+            "sisa": 1
+        },
+        {
+            "id": "6316214e7856ad5ef13a27fa",
+            "tipe": 0,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 140000,
+            "terisi": [7],
+            "sisa": 6
+        },
+        {
+            "id": "6316214e60ef250803579c9d",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "08.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1, 2, 4, 7],
+            "sisa": 1
+        },
+        {
+            "id": "6316214e1eb8fa5051ded8b6",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "14.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [2, 4, 5],
+            "sisa": 2
+        },
+        {
+            "id": "6316214e736584646205dd9f",
+            "tipe": 1,
+            "kotaAsal": "pekanbaru",
+            "kotaTujuan": "padang",
+            "waktu": "19.00",
+            "tanggal": "2022-09-10",
+            "harga": 190000,
+            "terisi": [1],
+            "sisa": 4
+        }
+    ]
+}

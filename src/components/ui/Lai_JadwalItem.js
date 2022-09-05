@@ -1,17 +1,17 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import dotify from "../../untils/dotify";
 
-const Lai_JadwalItem = ({ props }) => {
+const LaiJadwalItem = ({ props }) => {
     const sisa =
         props.tipe === 0 ? 7 - props.terisi.length : 5 - props.terisi.length;
 
     const location = useLocation();
-    const jumPenumpang = location.state.jumPenumpang;
+    const jumTiket = location.state.jumTiket;
 
     const navigate = useNavigate();
     const handlePesan = () => {
         navigate("/pesan", {
-            state: { idJadwal: props.id, jumTiket: jumPenumpang },
+            state: { idJadwal: props.id, jumTiket: jumTiket },
         });
     };
 
@@ -30,7 +30,7 @@ const Lai_JadwalItem = ({ props }) => {
                             {props.tipe === 0
                                 ? "Economy Class"
                                 : "Executive Star"}{" "}
-                            | {props.keberangkatan} - {props.tujuan}
+                            | {props.kotaAsal} - {props.kotaTujuan}
                         </b>
                     </p>
                     <p>Sisa {sisa} Kursi</p>
@@ -62,4 +62,4 @@ const Lai_JadwalItem = ({ props }) => {
     );
 };
 
-export default Lai_JadwalItem;
+export default LaiJadwalItem;

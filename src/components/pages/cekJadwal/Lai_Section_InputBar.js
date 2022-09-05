@@ -10,7 +10,7 @@ const LaiSectionInputBar = () => {
 
     const kotaAsal = location.state.kotaAsal;
     const kotaTujuan = location.state.kotaTujuan;
-    const jumPenumpang = location.state.jumPenumpang;
+    const jumTiket = location.state.jumTiket;
     const tanggal = location.state.tanggal;
 
     const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ const LaiSectionInputBar = () => {
                         <div>
                             <span>{dateInterpreter(tanggal)}</span>
                             <span className="lg:ml-8 block lg:inline">
-                                {jumPenumpang} Orang
+                                {jumTiket} Orang
                             </span>
                         </div>
                     </div>

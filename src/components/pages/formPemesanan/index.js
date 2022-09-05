@@ -1,73 +1,11 @@
 import { useState, useContext, useEffect, useRef } from "react";
 import { LaiFormPesanContext } from "../../../context/LaiFormPesanContext";
+import axios from "axios";
 import { useLocation, Navigate } from "react-router-dom";
 import LaiSectionSteps from "./Lai_Section_Steps";
 import LaiSectionFormBar from "./Lai_Section_FormBar";
 import LaiSectionFormPemesan from "./Lai_Section_FormPemesan";
 import LaiModal from "../../ui/Lai_Modal";
-
-const mockData = [
-    {
-        id: "pdgpku837103",
-        tipe: 1,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "08.00",
-        tanggal: "2022/08/31",
-        harga: 185000,
-        terisi: [1, 4],
-    },
-    {
-        id: "pdgpku830001",
-        tipe: 0,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "08.00",
-        tanggal: "2022/08/31",
-        harga: 140000,
-        terisi: [1, 2, 3, 4, 5],
-    },
-    {
-        id: "pdgpku812403",
-        tipe: 0,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "14.00",
-        tanggal: "2022/08/31",
-        harga: 140000,
-        terisi: [1, 5, 6, 7],
-    },
-    {
-        id: "pdgpku833913",
-        tipe: 1,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "20.00",
-        tanggal: "2022/08/31",
-        harga: 185000,
-        terisi: [1, 4, 5, 7],
-    },
-    {
-        id: "pdgpku243913",
-        tipe: 1,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "14.00",
-        tanggal: "2022/08/31",
-        harga: 185000,
-        terisi: [1, 2, 4, 5, 7],
-    },
-    {
-        id: "pdgpku813991",
-        tipe: 0,
-        keberangkatan: "padang",
-        tujuan: "pekanbaru",
-        waktu: "20.00",
-        tanggal: "2022/08/31",
-        harga: 140000,
-        terisi: [1, 2, 3, 4, 5, 6, 7],
-    },
-];
 
 const FormPemesanan = () => {
     const location = useLocation();
@@ -77,17 +15,23 @@ const FormPemesanan = () => {
     useEffect(() => {
         const idJadawl_temp = location.state ? location.state.idJadwal : "";
         const jumTiket_temp = location.state ? location.state.jumTiket : 0;
+        const url = "http://localhost:3004/jadwal?id=" + idJadawl_temp;
 
-        const itemJadwal = mockData.filter((itm) => itm.id === idJadawl_temp);
-        if (itemJadwal.length === 1) {
-            if (
-                !LaiFormContext.current.setContext(itemJadwal[0], jumTiket_temp)
-            ) {
+        axios.get(url).then((res) => {
+            const dtItemJadwal = res.data;
+            if (dtItemJadwal.length === 1) {
+                if (
+                    !LaiFormContext.current.setContext(
+                        dtItemJadwal[0],
+                        jumTiket_temp
+                    )
+                ) {
+                    setNullItem(true);
+                }
+            } else {
                 setNullItem(true);
             }
-        } else {
-            setNullItem(true);
-        }
+        });
     }, [location]);
 
     if (location.state === null) {

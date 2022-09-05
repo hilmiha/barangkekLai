@@ -14,8 +14,8 @@ const LaiCekJadwal = () => {
         kotaTujuan_Temp,
         setKotaTujuan_Temp,
         tanggal_Temp,
-        jumPenumpang_Temp,
-        setJumPenumpang_Temp,
+        jumTiket_Temp,
+        setJumTiket_Temp,
         isInputInvalid,
     } = useContext(LaiCekJadwalContext);
 
@@ -32,7 +32,7 @@ const LaiCekJadwal = () => {
 
     const handleJumPenumpang = (e) => {
         let value = e.target.value;
-        setJumPenumpang_Temp(value);
+        setJumTiket_Temp(value);
     };
 
     const [inputErrors, setInputErrors] = useState([]);
@@ -48,7 +48,7 @@ const LaiCekJadwal = () => {
                     kotaAsal: kotaAsal_Temp,
                     kotaTujuan: kotaTujuan_Temp,
                     tanggal: tanggal_Temp,
-                    jumPenumpang: jumPenumpang_Temp,
+                    jumTiket: jumTiket_Temp,
                 },
             });
         } else {
@@ -195,7 +195,7 @@ const LaiCekJadwal = () => {
                             ? "select select-error border-2 bg-white text-gray-500 font-normal"
                             : "select select-bordered select-primary border-gray-300 bg-white text-gray-500 font-normal"
                     }
-                    value={jumPenumpang_Temp}
+                    value={jumTiket_Temp}
                     onChange={handleJumPenumpang}
                 >
                     <option className="text-laiBlue text-lg" value={1}>

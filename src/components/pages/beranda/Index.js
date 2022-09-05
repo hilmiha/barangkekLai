@@ -1,4 +1,3 @@
-import LaiMainLayout from "../../ui/Lai_MainLayout";
 import LaiSectionTop from "./Lai_Section_Top";
 import LaiCekJadwal from "../../ui/Lai_CekJadwal";
 import LaiSectionRute from "./Lai_Section_Rute";
@@ -8,7 +7,6 @@ import LaiSectionOthLayanan from "./Lai_Section_OthLayanan";
 
 const BerandaPage = () => {
     return (
-        // <LaiMainLayout>
         <>
             <LaiSectionTop />
             <LaiCekJadwal />
@@ -17,8 +15,6 @@ const BerandaPage = () => {
             <LaiSectionKenapa />
             <LaiSectionOthLayanan />
         </>
-
-        // </LaiMainLayout>
     );
 };
 

@@ -8,7 +8,7 @@ export const LaiCekJadwalProvider = (props) => {
     const [kotaAsal_Temp, setKotaAsal_Temp] = useState("");
     const [kotaTujuan_Temp, setKotaTujuan_Temp] = useState("");
     const [tanggal_Temp, setTanggal_Temp] = useState(sekarang);
-    const [jumPenumpang_Temp, setJumPenumpang_Temp] = useState(1);
+    const [jumTiket_Temp, setJumTiket_Temp] = useState(1);
 
     const isInputInvalid = () => {
         let invalidInput = [];
@@ -25,7 +25,7 @@ export const LaiCekJadwalProvider = (props) => {
             invalidInput.push("tanggal");
         }
 
-        if (!(0 < jumPenumpang_Temp < 4)) {
+        if (!(0 < jumTiket_Temp < 4)) {
             invalidInput.push("jumPenumpang");
         }
 
@@ -42,8 +42,8 @@ export const LaiCekJadwalProvider = (props) => {
                     setKotaTujuan_Temp,
                     tanggal_Temp,
                     setTanggal_Temp,
-                    jumPenumpang_Temp,
-                    setJumPenumpang_Temp,
+                    jumTiket_Temp,
+                    setJumTiket_Temp,
                     isInputInvalid,
                 }}
             >

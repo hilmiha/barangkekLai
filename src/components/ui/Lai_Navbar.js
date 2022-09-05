@@ -2,8 +2,6 @@ import LaiThemeToggle from "./Lai_ThemeTogge";
 import { ReactComponent as MenuhamburgerIcon } from "../../assets/icons/menuhamburger_icon.svg";
 import logo from "../../assets/logo_sm.png";
 
-import { useEffect } from "react";
-
 const LaiNavbar = (props) => {
     return (
         <>
