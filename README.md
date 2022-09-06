@@ -30,7 +30,9 @@ Di dalam directory project, untuk menjalankan project beserta dengan JSON Server
     npm run dev
 
 Buka http://localhost:3000 untuk melihatnya di browser.
-
+Notes:
+  Semua item jadwal hanya tersedia pada tanggal 10 September 2022
+  
 ## Referensi 📑
 
 - [React JS](https://reactjs.org/)
