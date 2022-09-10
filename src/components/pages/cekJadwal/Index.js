@@ -4,8 +4,6 @@ import LaiSectionInfoOnline from "./Lai_Section_InfoOnline";
 import LaiSectionInputBar from "./Lai_Section_InputBar";
 import LaiSectionCekJResult from "./Lai_Section_CekJResult";
 
-import EndOfResult from "./Lai_Section_EndOfResult";
-
 const CekJadwalPage = () => {
     const location = useLocation();
     if (location.state === null) {
@@ -17,7 +15,6 @@ const CekJadwalPage = () => {
             <LaiSectionInfoOnline />
             <LaiSectionInputBar />
             <LaiSectionCekJResult />
-            <EndOfResult />
         </>
     );
 };

@@ -12,7 +12,7 @@ const LaiSectionFormBar = () => {
     const waktu = itemJadwal.waktu;
     return (
         <>
-            <div className="max-w-6xl w-full mx-auto px-6 lg:px-4 py-2   sticky top-16 z-0 bg-base-100">
+            <div className="max-w-6xl w-full mx-auto px-6 lg:px-4 py-2 sticky top-16 z-0 bg-base-100 border-1 border-base-100">
                 <div className="bg-primary text-primary-content text-center py-2 px-6 rounded-full text-sm">
                     <span>
                         <b>Selesaikan Pengisian Data Dalam Waktu: </b>

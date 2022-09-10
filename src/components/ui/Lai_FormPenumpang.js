@@ -11,14 +11,14 @@ const ComponentRow = ({
     return (
         <div className="mt-8">
             <div
-                className="bg-primary text-primary-content border border-laiBlue border-b-0 px-8 py-4 rounded-t-xl"
+                className="bg-accent text-accent-content border border-gray-200 border-b-0 px-8 py-4 rounded-t-xl"
                 id={"formPenumpang_" + no}
             >
                 <p>
                     <b>Detail Penumpang {no + 1}</b>
                 </p>
             </div>
-            <div className="bg-white text-laiBlue border border-laiBlue border-t-0 p-8 rounded-b-xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white text-laiBlue border border-gray-200 border-t-0 p-8 rounded-b-xl grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <span className="font-bold mb-4 block">No Identitas</span>
                     <input

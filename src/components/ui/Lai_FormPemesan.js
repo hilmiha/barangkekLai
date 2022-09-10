@@ -26,7 +26,7 @@ const LaiFormPemesan = ({ inputErrors }) => {
     return (
         <div>
             <div
-                className="bg-primary text-primary-content border border-laiBlue border-b-0 px-8 py-4 rounded-t-xl"
+                className="bg-accent text-accent-content border border-gray-200 border-b-0 px-8 py-4 rounded-t-xl"
                 id="formPemesan"
             >
                 <p>
@@ -34,7 +34,7 @@ const LaiFormPemesan = ({ inputErrors }) => {
                 </p>
             </div>
 
-            <div className="bg-white text-laiBlue border border-laiBlue border-t-0 p-8 rounded-b-xl">
+            <div className="bg-white text-laiBlue border border-gray-200 border-t-0 p-8 rounded-b-xl">
                 <div className="mb-8">
                     <span className="font-bold mb-4 block">No Identitas</span>
                     <input
@@ -53,7 +53,6 @@ const LaiFormPemesan = ({ inputErrors }) => {
                         </span>
                     )}
                 </div>
-
                 <div className="mb-8">
                     <span className="font-bold mb-4 block">
                         Nama Pemesan
