@@ -1,6 +1,6 @@
 ## Tentang
 
-![Screenshot of the running project](https://raw.githubusercontent.com/hilmiha/barangkekLai/master/src/assets/dev/sc_dev.png)
+![Screenshot of the running project](https://raw.githubusercontent.com/hilmiha/barangkekLai/master/src/assets/dev/sc_dev2.png)
 
 Front-end React Aplication untuk kebutuhan memesan tiket travel di sebuah mock "agensi travel" bernama BerangkekLai, yang memiliki fokus jalur perjalanan pulang pergi Pekanbaru - Bukittingi - Padang.
 
